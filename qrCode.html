@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+    <input type="text" id="qr-data" onchange="generateQR()">
+        <div id="qrcode"></div>
+    </body>
+    <script src="qrcode.min.js"></script>
+    <script>
+    var qrData=document.getElementById("qr-data");
+    var qrCode=new QRCode(document.getElementById("qrcode"));    
+        function generateQR()
+        {
+            var data=qrData.value;
+            qrCode.makeCode("http://www.google.com");
+            
+        }
+    </script>
+</html>
